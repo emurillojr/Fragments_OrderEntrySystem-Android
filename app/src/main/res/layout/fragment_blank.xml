@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="neit.lab1fragments.BlankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/txtFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/lblFirstName"
+        android:layout_alignBottom="@+id/lblFirstName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/txtLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/txtFirstName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/lblFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:id="@+id/lblLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        android:layout_alignBaseline="@+id/txtLastName"
+        android:layout_alignBottom="@+id/txtLastName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/lblTypeOfChoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lblLastName"
+        android:layout_alignRight="@+id/lblLastName"
+        android:layout_below="@+id/lblLastName"
+        android:layout_marginTop="30dp"
+        android:text="Type of Chocolate"
+
+
+        />
+
+    <Spinner
+        android:id="@+id/ddTypeOfChoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtLastName"
+        android:layout_alignStart="@+id/txtLastName"
+        android:layout_alignTop="@+id/lblTypeOfChoc"
+        android:entries="@array/bar_flavors"
+
+        />
+
+    <TextView
+        android:id="@+id/lblNumberOfBars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="Number of Bars"
+        android:layout_below="@+id/lblTypeOfChoc"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/txtNumberOfBars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblNumberOfBars"
+        android:layout_alignBottom="@+id/lblNumberOfBars"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/lblShipmentType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Shipment Type"
+        android:layout_below="@+id/txtNumberOfBars"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/txtNumberOfBars"
+        android:layout_alignLeft="@+id/txtNumberOfBars"
+        android:layout_alignStart="@+id/txtNumberOfBars">
+        <RadioButton
+            android:id="@+id/rbNormalShipment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblShipmentType"
+            android:layout_marginTop="7dp"
+
+            android:checked="true"
+            android:text="Normal Shipment"
+
+            />
+
+        <RadioButton
+            android:id="@+id/rbExpited"
+            android:layout_width="153dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBaseline="@+id/rbNormalShipment"
+
+            android:layout_alignBottom="@+id/rbNormalShipment"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            android:text="Expidited" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/txtResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Results"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="38dp"
+        android:layout_marginEnd="38dp" />
+
+    <Button
+        android:id="@+id/btnGetResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/radioGroup"
+        android:text="Save" />
+
+</RelativeLayout>
